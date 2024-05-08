@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "UploadExcel";
+}
+
+<h2>Upload Excel Sheet</h2>
+
+@using (Html.BeginForm("ProcessExcelSheet", "Macro", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <label for="file">Select Excel Sheet:</label>
+        <input type="file" name="file" id="file" class="form-control-file">
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+}
+
